@@ -3,10 +3,10 @@
 	include('cima.php');
 	include('conecta.php');
 	include('banco_produtos.php');
-?>
-<?php
+	include_once('logica_usuario.php');
 $id = $_POST['id'];
 removeProduto($conexao, $id);
-header("Location: lista.php?removido=true");
+$_SESSION["success"] = "Produto deletado com sucesso";
+header("Location: lista.php");
 die();
 ?>

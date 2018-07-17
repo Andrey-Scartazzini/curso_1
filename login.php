@@ -5,11 +5,13 @@ $senha = $_POST['senha'];
 $email = $_POST['email'];
 $usuario = buscaUsuario($conexao, $email, $senha);
 if ($usuario == null){
-    header("Location: index.php?login=0");
+    $_SESSION["danger"] = "Usuário ou senha inválida";
+    header("Location: index.php");
 }
 else{
     logausuario($email);
-    header("Location: index.php?login=1");
+    $_SESSION["success"] = "Usuário lougado com sucesso";
+    header("Location: index.php");
 };
 die();
 ?>

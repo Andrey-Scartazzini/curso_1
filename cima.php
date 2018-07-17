@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php error_reporting(E_ALL ^ E_NOTICE) ?>
+<?php include('mostra_alerta.php')?>
+<?php mostraalerta("success"); mostraalerta("danger");?>
 <html>
 <head>
 	<meta charset='utf-8'>

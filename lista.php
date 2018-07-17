@@ -2,12 +2,7 @@
 	include('cima.php');
 	include('conecta.php');
 	include('banco_produtos.php');
-?> 
-<?php 
-	if(array_key_exists("removido", $_GET) && $_GET["removido"]=="true"){
-		echo '<p class="alert-success" align="center">Produto apagado com sucesso.</p>';
-	};
-
+	include('logica_usuario.php');
 ?>
         <table class="table table-striped table-bordered">
             <tr>

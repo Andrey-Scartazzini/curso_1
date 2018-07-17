@@ -1,11 +1,12 @@
 <?php
-SESSION_START();
+session_start();
 function usuarioestalogado(){
     return isset($_SESSION["usuario_logado"]);
 };
 function verificaUsuario(){
     if(!usuarioestalogado()){
-        header("Location: index.php?falhadeseguranca=true");
+    $_SESSION["danger"] = "Você não esta logado";
+        header("Location: index.php");
         die();
     };
 };
@@ -18,4 +19,5 @@ function logausuario($email){
 
 function logout(){
     session_destroy();
+    session_start();
 };
