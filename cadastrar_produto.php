@@ -1,44 +1,18 @@
 <?php include("logica_usuario.php"); verificaUsuario();?>
-<?php include("cima.php")?>
-<?php include("conecta.php")?>
-<?php
+<?php include("cima.php");
     include("banco_categoria.php");
 	$categorias = listaCategorias($conexao);
+?>
+<?php
+    $produto = array("nome" => "", "descricao" => "", "preco" => "", "categoria_id" => "1");
+    $usado = "";
 ?>
     <h1>Formulário de produto</h1>
 		<div class="cantainer">
 			<div class="principal">
 				<form action="cadastrar_produto_1.php" method="post">
 					<table class="table">
-						<tr>
-							<td>Nome</td> 
-							<td><input class="form-control" type="text" name="nome"></td>
-						</tr>
-                        <tr>
-                            <td>Preço</td>
-                            <td><input class="form-control" type="number" name="preco"></td>
-                        </tr>
-						<tr>
-							<td>Descrição</td> 
-							<td><textarea class="form-control" name="descricao"></textarea></td>
-						</tr>
-                        <tr>
-                            <td></td>
-                            <td><input type="checkbox" name="usado" value="true">usado
-                            </td>
-                        </tr>
-						<tr>
-							<td>
-								Categoria
-							</td>
-                            <td>
-                                <select name='categoria_id' class="form-control">
-								<?php foreach($categorias as $categoria){?>
-                                    <option value="<?= $categoria['id']?>"> <?= $categoria['nome']?></option>
-								<?php } ?>
-                                </select>
-							</td>
-						</tr>
+                        <?php include("produto_formulario_base.php")?>
 						<tr>
 							<td colspan="2"><button class="btn btn-primary" type="submit">cadastrar</button></td>
 						</tr>

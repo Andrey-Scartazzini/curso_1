@@ -1,8 +1,7 @@
 <?php 
-	include('cima.php');
-	include('conecta.php');
-	include('banco_produtos.php');
-	include('logica_usuario.php');
+	require_once('cima.php');
+	require_once('banco_produtos.php');
+	require_once('logica_usuario.php');
 ?>
         <table class="table table-striped table-bordered">
             <tr>

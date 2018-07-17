@@ -1,6 +1,7 @@
-<?php include('conecta.php');
-include('banco_usuario.php');
-include('logica_usuario.php');
+<?php
+
+require_once('banco_usuario.php');
+require_once('logica_usuario.php');
 $senha = $_POST['senha'];
 $email = $_POST['email'];
 $usuario = buscaUsuario($conexao, $email, $senha);
@@ -10,7 +11,7 @@ if ($usuario == null){
 }
 else{
     logausuario($email);
-    $_SESSION["success"] = "Usuário lougado com sucesso";
+    $_SESSION["success"] = "Você esta logado, desefa ";
     header("Location: index.php");
 };
 die();
