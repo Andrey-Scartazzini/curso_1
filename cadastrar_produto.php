@@ -4,19 +4,19 @@
     include("banco_categoria.php");
 	$categorias = listaCategorias($conexao);
 ?>
+    <h1>Formulário de produto</h1>
 		<div class="cantainer">
 			<div class="principal">
 				<form action="cadastrar_produto_1.php" method="post">
 					<table class="table">
-                        <tr>
-                            <td colspan="2">
-                                Formulário de Produtos
-                            </td>
-                        </tr>
 						<tr>
 							<td>Nome</td> 
 							<td><input class="form-control" type="text" name="nome"></td>
 						</tr>
+                        <tr>
+                            <td>Preço</td>
+                            <td><input class="form-control" type="number" name="preco"></td>
+                        </tr>
 						<tr>
 							<td>Descrição</td> 
 							<td><textarea class="form-control" name="descricao"></textarea></td>
@@ -37,10 +37,6 @@
 								<?php } ?>
                                 </select>
 							</td>
-						</tr>
-						<tr>
-							<td>Preço</td>
-							<td><input class="form-control" type="number" name="preco"></td>
 						</tr>
 						<tr>
 							<td colspan="2"><button class="btn btn-primary" type="submit">cadastrar</button></td>
