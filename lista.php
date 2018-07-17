@@ -26,7 +26,7 @@
 		<td><?php echo $produto['preco']?></td>
 		<td><?php echo substr($produto['descricao'], 0, 40)?></td>
         <td><?php echo $produto['categoria_nome']?></td>
-        <td><?php if($produto['usado'] = 0){echo "sim"; } else{echo "não";};?></td>
+        <td><?php if($produto['usado'] == true ){echo "sim"; } else{echo "não";};?></td>
         <td>
             <form action="alterar_produto.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $produto['id']?>">
