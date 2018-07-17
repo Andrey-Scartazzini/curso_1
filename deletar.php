@@ -1,4 +1,5 @@
-<?php 
+<?php include("logica_usuario.php"); verificaUsuario();?>
+<?php
 	include('cima.php');
 	include('conecta.php');
 	include('banco_produtos.php');

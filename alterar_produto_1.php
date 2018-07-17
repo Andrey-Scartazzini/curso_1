@@ -1,6 +1,7 @@
 <?php include('cima.php')?>
 <?php include('conecta.php')?>
 <?php include('banco_produtos.php')?>
+<?php include("logica_usuario.php"); verificaUsuario();?>
 		<?php
 		$id = $_POST["id"];
 		$preco = $_POST["preco"];

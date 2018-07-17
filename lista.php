@@ -1,6 +1,6 @@
 <?php 
 	include('cima.php');
-	include('conexao.php');
+	include('conecta.php');
 	include('banco_produtos.php');
 ?> 
 <?php 

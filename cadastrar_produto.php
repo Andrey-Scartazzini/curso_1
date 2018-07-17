@@ -1,5 +1,6 @@
+<?php include("logica_usuario.php"); verificaUsuario();?>
 <?php include("cima.php")?>
-<?php include("conexao.php")?>
+<?php include("conecta.php")?>
 <?php
     include("banco_categoria.php");
 	$categorias = listaCategorias($conexao);

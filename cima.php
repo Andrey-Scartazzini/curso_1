@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset='utf-8'>
@@ -18,6 +19,6 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+    </div>
     <div class="container">
         <div class="principal">
