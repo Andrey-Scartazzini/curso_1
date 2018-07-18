@@ -2,6 +2,10 @@
 <?php require_once("cima.php");
 require_once("banco_categoria.php");
 	$categorias = listaCategorias($conexao);
+	?>
+<?php
+	require_once('mostra_alerta.php');
+    alert();
 ?>
 <?php
     $produto = array("nome" => "", "descricao" => "", "preco" => "", "categoria_id" => "1");

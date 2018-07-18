@@ -12,13 +12,20 @@
         } else{
 		    $usado = "false";
         };
-		if(alteraProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado, $id)){
-            $_SESSION["success"] = "Produto $nome alterado";
-            header("Location: lista_produto.php");
-        } else{
+        if($nome != '' && $preco != '') {
+            if (alteraProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado, $id)) {
+                $_SESSION["success"] = "Produto $nome alterado";
+                header("Location: lista_produto.php");
+            } else {
+                $_SESSION["danger"] = "Produto $nome não foi alterado";
+                header("Location: alterar_produto.php");
+            }
+        }
+        else {
             $_SESSION["danger"] = "Produto $nome não foi alterado";
             header("Location: lista_produto.php");
         }
+		?>
 		?>
 	</body>
 </html>

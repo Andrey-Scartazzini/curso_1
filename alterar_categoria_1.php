@@ -4,11 +4,21 @@
 		<?php
 		$id = $_POST["id"];
 		$nome = $_POST['nome'];
-		if(alteraCategoria($conexao, $nome, $id)){
-			echo "<p class='text-success'>Categoria $nome foi alterado</p>";
-		}
-		else{ echo "<p class='text-danger'>Categoria $nome não foi alterado</p>";
-		};
+        if($nome != '') {
+            if(alteraCategoria($conexao, $nome, $id)){
+                $_SESSION["success"] = "Categoria $nome foi alterado";
+                header("Location: lista_categoria.php");
+            }
+            else{
+                $_SESSION["danger"] = "Categoria $nome não foi alterado";
+                header("Location: lista_categoria.php");
+            };
+        }
+        else {
+            $_SESSION["danger"] = "Categoria $nome não foi alterado";
+            header("Location: lista_categoria.php");
+        }
+        ?>
 		?>
 	</body>
 </html>

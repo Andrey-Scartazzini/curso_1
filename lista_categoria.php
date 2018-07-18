@@ -2,6 +2,8 @@
 	require_once('cima.php');
 	require_once('banco_categoria.php');
 	require_once('logica_usuario.php');
+require_once('mostra_alerta.php');
+alert();
 ?>
         <table class="table table-striped table-bordered">
             <tr>

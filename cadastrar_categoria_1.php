@@ -3,11 +3,21 @@
 <?php include('banco_categoria.php')?>
 		<?php
 		$nome = $_POST['nome'];
-		if(insereCategoria($conexao, $nome)){
-			echo "<p class='text-success'>Categoria $nome foi cadastrado</p>";
-		}
-		else{ echo "<p class='text-danger'>Categoria $nome não foi cadastrado</p>";
-		};
+        if($nome != '') {
+            if (insereCategoria($conexao, $nome)) {
+                $_SESSION["success"] = "Categoria $nome foi cadastrado";
+                header("Location: index.php");
+            }
+            else {
+                $_SESSION["danger"] = "Categoria $nome não foi cadastrado";
+                header("Location: cadastrar_categoria.php");
+            }
+        }
+        else {
+            $_SESSION["danger"] = "Categoria $nome não foi cadastrado";
+            header("Location: cadastrar_categoria.php");
+        }
+        ?>
 		?>
 	</body>
 </html>

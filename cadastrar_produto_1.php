@@ -11,12 +11,19 @@
         } else{
 		    $usado = "false";
         };
-
-		if(insereProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado)){
-			echo "<p class='text-success'>Produto $nome com o valor de $preco foi cadastrado.</p>";
-		}
-		else{ echo "<p class='text-danger'>Produto $nome não foi cadastrado</p>";
-		};
+		if($nome != '' && $preco != '') {
+            if (insereProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado)) {
+                $_SESSION["success"] = "Produto $nome com o valor de $preco foi cadastrado.";
+                header("Location: index.php");
+            } else {
+                $_SESSION["danger"] = "Produto $nome não foi cadastrado";
+                header("Location: cadastrar_produto.php");
+            }
+        }
+        else {
+            $_SESSION["danger"] = "Produto $nome não foi cadastrado";
+            header("Location: cadastrar_produto.php");
+        }
 		?>
 	</body>
 </html>

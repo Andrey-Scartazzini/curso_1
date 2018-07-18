@@ -2,6 +2,10 @@
 <?php require_once("banco_categoria.php"); $categorias = listaCategorias($conexao);?>
 <?php require_once("banco_produtos.php")?>
 <?php require_once("logica_usuario.php"); verificaUsuario();?>
+<?
+require_once('mostra_alerta.php');
+alert();
+?>
 <?php
     $id = $_POST["id"];
     $produto = BuscaProduto($conexao, $id);

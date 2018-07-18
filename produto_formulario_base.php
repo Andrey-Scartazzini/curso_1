@@ -13,7 +13,7 @@
 </tr>
 <tr>
     <td></td>
-    <td><input type="checkbox" name="usado" value="true" <?= $usado ?>$usado>usado
+    <td><input type="checkbox" name="usado" value="true" <?= $usado ?>/>usado
     </td>
 </tr>
 <tr>
