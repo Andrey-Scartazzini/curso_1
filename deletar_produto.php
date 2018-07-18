@@ -6,6 +6,6 @@
 $id = $_POST['id'];
 removeProduto($conexao, $id);
 $_SESSION["success"] = "Produto deletado com sucesso";
-header("Location: lista.php");
+header("Location: lista_produto.php");
 die();
 ?>

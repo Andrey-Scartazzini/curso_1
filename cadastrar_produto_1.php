@@ -13,7 +13,7 @@
         };
 
 		if(insereProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado)){
-			echo "<p class='text-success'>Produto $nome , com o valor de preco $preco foi cadastrado</p>";
+			echo "<p class='text-success'>Produto $nome com o valor de $preco foi cadastrado.</p>";
 		}
 		else{ echo "<p class='text-danger'>Produto $nome não foi cadastrado</p>";
 		};

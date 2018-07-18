@@ -2,6 +2,8 @@
 	require_once('cima.php');
 	require_once('banco_produtos.php');
 	require_once('logica_usuario.php');
+	require_once('mostra_alerta.php');
+	alert();
 ?>
         <table class="table table-striped table-bordered">
             <tr>
@@ -28,7 +30,7 @@
                     </form>
                 </td>
                 <td>
-                    <form action="deletar.php" method="post">
+                    <form action="deletar_produto.php" method="post">
                         <input type="hidden" name="id" value="<?php echo $produto['id']?>">
                         <button class="btn btn-danger">remover</button>
                     </form>

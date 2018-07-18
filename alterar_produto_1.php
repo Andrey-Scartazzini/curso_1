@@ -12,12 +12,13 @@
         } else{
 		    $usado = "false";
         };
-
 		if(alteraProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado, $id)){
-			echo "<p class='text-success'>Produto $nome , com o valor de $preco foi alterado</p>";
-		}
-		else{ echo "<p class='text-danger'>Produto $nome não foi alterado</p>";
-		};
+            $_SESSION["success"] = "Produto $nome alterado";
+            header("Location: lista_produto.php");
+        } else{
+            $_SESSION["danger"] = "Produto $nome não foi alterado";
+            header("Location: lista_produto.php");
+        }
 		?>
 	</body>
 </html>

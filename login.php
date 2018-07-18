@@ -11,7 +11,6 @@ if ($usuario == null){
 }
 else{
     logausuario($email);
-    $_SESSION["success"] = "Você esta logado, desefa ";
     header("Location: index.php");
 };
 die();

@@ -17,7 +17,10 @@
 			<div>
 				<ul class="nav navbar-nav">
 					<li><a href="cadastrar_produto.php">Inserir produtos</a></li>
-					<li><a href="lista.php">Lista</a></li>
+					<li><a href="cadastrar_categoria.php">Inserir Categoria</a></li>
+					<li><a href="lista_produto.php">Lista dos produtos</a></li>
+					<li><a href="lista_categoria.php">Lista das categorias</a></li>
+					<li><a href="contato.php">Contato</a></li>
 				</ul>
 			</div>
 		</div>

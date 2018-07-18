@@ -1,6 +1,6 @@
-<?php include("logica_usuario.php"); verificaUsuario();?>
-<?php include("cima.php");
-    include("banco_categoria.php");
+<?php require_once("logica_usuario.php"); verificaUsuario();?>
+<?php require_once("cima.php");
+require_once("banco_categoria.php");
 	$categorias = listaCategorias($conexao);
 ?>
 <?php
